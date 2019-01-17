@@ -9,6 +9,7 @@ import { ResultComponent } from './components/result/result.component';
 import { SizeSettingComponent } from './components/size-setting/size-setting.component';
 import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
 import { ChangeStatusDirective } from './change-status.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChangeStatusDirective } from './change-status.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

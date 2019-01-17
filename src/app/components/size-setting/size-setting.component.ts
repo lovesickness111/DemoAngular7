@@ -1,11 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
 @Component({
   selector: 'app-size-setting',
   templateUrl: './size-setting.component.html',
   styleUrls: ['./size-setting.component.scss']
 })
-export class SizeSettingComponent implements OnInit {
+export class SizeSettingComponent implements OnInit, OnDestroy, OnChanges, DoCheck {
+  // giá trị để test binding
+  value = ` Size Setting`;
+  // giá trị test doCheck
+  count: number;
   /**
    * size default
    */
@@ -13,9 +16,35 @@ export class SizeSettingComponent implements OnInit {
   @Input('size') sizeDefault: number;
   // tslint:disable-next-line:no-output-rename
   @Output('outSize') sizeConnector = new EventEmitter();
-  constructor() { }
+  constructor() { console.log(`constructor-SizeSettingComponent`); }
+  /**
+   * onchange
+   */
+  ngOnChanges(simple: SimpleChanges) {
+    console.log(`OnChanges-SizeSettingComponent`);
+    console.log(simple);
 
+  }
+  /**
+   * oninit
+   */
   ngOnInit() {
+    console.log(`OnInit-SizeSettingComponent`);
+    this.count = 0;
+  }
+
+  /**
+   * hàm Docheck, cứ gọi OnChanges hoặc Oninit thì Docheck được gọi
+   */
+  ngDoCheck() {
+    this.count++;
+    console.log(`DoCheck-SizeSettingComponent:  ${this.count}`);
+  }
+  /**
+   * hàm hủy component
+   */
+  ngOnDestroy() {
+    console.log(`OnDestroy - SizesettingComponent`);
   }
   /**
    * change size

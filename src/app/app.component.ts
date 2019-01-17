@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  /**
+   * biến show hiện/ ẩn component
+   */
+  isShowing = false;
+  // màu và size mặc định
   colorDefault = `black`;
   fontSizeDefault = 16;
   /**
@@ -20,10 +25,20 @@ export class AppComponent {
   getSize(event) {
     this.fontSizeDefault = event;
   }
+  /**
+   * chuyển màu
+   * @param event 
+   */
   getDefault(event) {
 
     this.fontSizeDefault = 16;
     this.colorDefault = `black`;
 
+  }
+  /**
+   * toggle component
+   */
+  toggleShowSetting(){
+    this.isShowing = !this.isShowing;
   }
 }

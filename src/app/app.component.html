@@ -5,14 +5,14 @@
       (outColor)="getColor($event)"
       ></app-color-picker>
     </div>
-    <div class="content-item width-50 ">
+    <ng-container class="content-item width-50" *ngIf="isShowing">
       <app-size-setting 
       [size]="fontSizeDefault"
       (outSize)="getSize($event)"
       ></app-size-setting>
       <app-reset (resetDefault)="getDefault($event)"></app-reset>
-    </div>
-    
+    </ng-container>
+    <button (click)="toggleShowSetting()"><b> ẨN/HIỆN</b></button>
   </div>
   <div class="content-result">
     <!--truyen @input-->

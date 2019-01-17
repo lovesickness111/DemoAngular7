@@ -9,7 +9,6 @@ export class ChangeStatusDirective {
    * @param Element instance mà thẻ directive nằm trong
    */
   constructor(Element: ElementRef) {
-    console.log(Element);
     Element.nativeElement.addEventListener('click', function () {Element.nativeElement.innerText = `Change`});
   }
 
