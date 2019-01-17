@@ -1,0 +1,17 @@
+<h2 [style.background]="isHighLight ? 'yellow': 'white'">
+  This text demo attribute directives
+</h2>
+
+<h2 [ngStyle]="isHighLight === true ? highlightStyle:{ background: 'white', color: 'black' }">
+  This text demo attribute directives ngStyle
+</h2>
+<div class="d-flex">
+  <div [class]="isHighLight ? 'circle' : 'square'">attribute binding</div>
+
+  <div [class.circle]="isHighLight" [class.square]="!isHighLight">attribute binding</div>
+
+  <div [ngClass]="{circle:isHighLight,square:!isHighLight}">ngClass binding</div>
+  
+
+</div>
+<div class="button-change" appChangeStatus (click)="switchDirective()"><p>Click Here to change value of isHighLight property!</p></div>

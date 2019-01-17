@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+.d-flex{
+    display: flex
+}
+.flex-row{
+    flex-direction: row
+}
+.flex-column{
+    flex-direction: column
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.width-50{
+    width: 50%;
+}
+.width-100{
+    width: 100%;
+}
+.width-48{
+    width: 48px;
+}
+.width-64{
+    width: 64px;
+}
+.bordered{
+    border:1px solid #ccc;
+}
+.item-square-36{
+    width: 36px;
+    height: 36px;
+
+}
+.margin-8{
+    margin: 8px;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}

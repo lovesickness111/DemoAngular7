@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Color-Picker';
+  colorDefault = `black`;
+  fontSizeDefault = 16;
+  /**
+   * create new function to get color from colorPicker.component 
+   */
+  getColor(event) {
+    this.colorDefault = event;
+  }
+  /**
+   * getSize
+   */
+  getSize(event) {
+    this.fontSizeDefault = event;
+  }
+  getDefault(event) {
+
+    this.fontSizeDefault = 16;
+    this.colorDefault = `black`;
+
+  }
 }

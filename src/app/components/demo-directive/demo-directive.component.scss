@@ -1,0 +1,39 @@
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  color: #ffffff;
+  background-color: #0072bc;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  margin: 8px
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border-radius: 0px;
+  color: #ffffff;
+  background-color: #0072bc;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  margin: 8px
+
+}
+
+.button-change {
+  width: 250px;
+  height: 50px;
+  margin-left: 500px;
+  background: #55ca07;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+.button-change:hover{
+    cursor: pointer;
+}
