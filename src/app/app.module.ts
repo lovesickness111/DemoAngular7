@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { ResultComponent } from './components/result/result.component';
@@ -10,6 +8,8 @@ import { SizeSettingComponent } from './components/size-setting/size-setting.com
 import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
 import { ChangeStatusDirective } from './change-status.directive';
 import { FormsModule } from '@angular/forms';
+import { DemoJqueryComponent } from './components/demo-jquery/demo-jquery.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     ResultComponent,
     SizeSettingComponent,
     DemoDirectiveComponent,
-    ChangeStatusDirective
+    ChangeStatusDirective,
+    DemoJqueryComponent
   ],
   imports: [
     BrowserModule,

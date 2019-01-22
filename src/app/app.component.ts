@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   /**
    * biến show hiện/ ẩn component
    */
@@ -13,6 +13,11 @@ export class AppComponent {
   // màu và size mặc định
   colorDefault = `black`;
   fontSizeDefault = 16;
+  ngOnInit(): void {
+  }
+  ngAfterViewInit(): void {
+    $('.container').hide();
+  }
   /**
    * create new function to get color from colorPicker.component 
    */
@@ -20,7 +25,7 @@ export class AppComponent {
     this.colorDefault = event;
   }
   /**
-   * getSize
+   * getSize  
    */
   getSize(event) {
     this.fontSizeDefault = event;
@@ -38,7 +43,7 @@ export class AppComponent {
   /**
    * toggle component
    */
-  toggleShowSetting(){
+  toggleShowSetting() {
     this.isShowing = !this.isShowing;
   }
 }
